@@ -19,8 +19,8 @@
             </div>
             <div class="credit-card-form">
                 <div class="field">
-                    <label for="name">{{ trans.name.label }}</label>
-                    <input maxlength="20"
+                    <label for="name" class="vs-input--label">{{ trans.name.label }}</label>
+                    <input class="vs-inputx vs-input--input normal" maxlength="20"
                         name="name"
                         id="name"
                         type="text"
@@ -29,8 +29,8 @@
                         @focus="flipped = false">
                 </div>
                 <div class="field">
-                    <label for="card-number">{{ trans.card.label}}</label>
-                    <input type="text"
+                    <label for="card-number" class="vs-input--label">{{ trans.card.label}}</label>
+                    <input class="vs-inputx vs-input--input normal" type="text"
                         name="card_number"
                         id="card-number"
                         ref="cardNumber"
@@ -44,8 +44,8 @@
                 </div>
                 <div class="field-group">
                     <div class="field">
-                        <label for="expirationdate">{{ trans.expiration.label}} (mm/{{isTwoDigitsYear ? 'yy' : 'yyyy'}})</label>
-                        <input type="text"
+                        <label for="expirationdate" class="vs-input--label">{{ trans.expiration.label}} (mm/{{isTwoDigitsYear ? 'yy' : 'yyyy'}})</label>
+                        <input class="vs-inputx vs-input--input normal" type="text"
                             name="expiration_date"
                             id="expirationdate"
                             pattern="[0-9\/]*"
@@ -55,8 +55,8 @@
                             @focus="flipped = false">
                     </div>
                     <div class="field">
-                        <label for="securitycode">{{ trans.security.label}}</label>
-                        <input type="text"
+                        <label for="securitycode" class="vs-input--label">{{ trans.security.label}}</label>
+                        <input class="vs-inputx vs-input--input normal" type="text"
                             name="security_code"
                             id="securitycode"
                             ref="security"
@@ -241,7 +241,7 @@ export default {
             align-items: stretch;
             justify-content: space-between;
             max-width: 400px;
-            padding: 20px;
+          
             color: #707070;
 
             .field-group {
@@ -257,20 +257,7 @@ export default {
                 width: 100%;
                 margin: 10px 0;
 
-                label {
-                    padding-bottom: 5px;
-                    font-size: 13px;
-                }
-
-                input {
-                    box-sizing: border-box;
-                    margin-top: 3px;
-                    padding: 15px;
-                    font-size: 16px;
-                    width: 100%;
-                    border-radius: 3px;
-                    border: 1px solid #dcdcdc;
-                }
+         
             }
         }
     }
